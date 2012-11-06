@@ -1,5 +1,0 @@
-N:\AI\Heart-Anomalies\Heart-Anomalies\bin\Debug\Heart-Anomalies.exe
-N:\AI\Heart-Anomalies\Heart-Anomalies\bin\Debug\Heart-Anomalies.pdb
-N:\AI\Heart-Anomalies\Heart-Anomalies\obj\x86\Debug\ResolveAssemblyReference.cache
-N:\AI\Heart-Anomalies\Heart-Anomalies\obj\x86\Debug\Heart-Anomalies.exe
-N:\AI\Heart-Anomalies\Heart-Anomalies\obj\x86\Debug\Heart-Anomalies.pdb
