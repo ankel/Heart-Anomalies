@@ -23,15 +23,15 @@ m = 0.05
 itg 174/187(0.93) 3/15(0.20) 171/172(0.99)
 orig 144/187(0.77) 10/15(0.67) 134/172(0.78)
 resplit 75/90(0.83) 16/19(0.84) 59/71(0.83)
-minor improved on orig and resplit case, itg improved 3 pts overal but absolutely broken on the abnormal case with near perfect result on normal case - One way to use this is to check for normal and whoever isn't normal is definitely abnormal.
+minor improved on orig and resplit case, itg improved 3 pts overal but absolutely broken on the abnormal case with near perfect result on normal case.
 
 m = 10 * double.Epsilon (the smallest number representable using IEEE double precision floating point data type - used 10 times to account for taking log of it)
 itg 40/187(0.21) 15/15(1.00) 25/172(0.15)
 orig 145/187(0.78) 10/15(0.67) 135/172(0.78)
 resplit 75/90(0.83) 16/19(0.84) 59/71(0.83)
-again, fairly stable result on orig and resplit, completely broke itg data set but most noticably 100% accuracy on the abnormal case - This time the better usage is to check for abnormal and if you're not abnormal, well, you're normal.
+again, fairly stable result on orig and resplit, completely broke itg data set but most noticably 100% accuracy on the abnormal case
 
-There is probably some complex statitics/math explanation behind why itg abnormal case goes down and then jumps up as m decrease. But my point is that m has some effect on the final result and thus should be choosen carefuly to avoid overfitting / underfitting.
+There is probably some complex statitics/math explanation behind why itg abnormal case goes down and then jumps up as m decrease. But clearly m has some effect on the final result and thus should be choosen carefuly to avoid overfitting / underfitting.
 
 Program run really fast, which is to be expected for O(n) training time complexity and O(1) time testing per individual case.
 

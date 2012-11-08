@@ -13,7 +13,7 @@ namespace Heart_Anomalies
             {"orig", new Tuple<string, string>(@"..\..\..\heart-data\spect-orig.train.csv", @"..\..\..\heart-data\spect-orig.test.csv")},
             {"resplit", new Tuple<string, string>(@"..\..\..\heart-data\spect-resplit.train.csv", @"..\..\..\heart-data\spect-resplit.test.csv")},
         };
-        static double MConst = 10 * double.Epsilon;
+        static double MConst = 0.5;
         static bool debug = false;
         static System.IO.StreamWriter debugFile = new System.IO.StreamWriter(@"..\..\..\debug.txt", false);
 
@@ -137,10 +137,10 @@ namespace Heart_Anomalies
         {
             foreach(var d in data)
             {
-                int[,] learned = Learn(d.Value.Item2);
+                int[,] learned = Learn(d.Value.Item1);
                 int[] actual = new int[2];
                 int[] predic = new int[2];
-                using (System.IO.StreamReader inFile = new System.IO.StreamReader(d.Value.Item1))
+                using (System.IO.StreamReader inFile = new System.IO.StreamReader(d.Value.Item2))
                 {
                     
                     while (!inFile.EndOfStream)
